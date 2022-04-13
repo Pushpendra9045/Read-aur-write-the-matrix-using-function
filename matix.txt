@@ -1,0 +1,53 @@
+// Write a program to read a matrix of size mxn from the keyword and display the same using funtion;
+
+#include<iostream>
+using namespace std;
+#define m 3 
+#define n 3 
+//creating a class named matrix;
+class matrix 
+{
+    int arr[m][n];
+    public:
+       //creating a function to get input from user
+        void getmatrix(int,int );
+        //creating a function dispplay the output
+        void printmatrix(void);
+        
+};
+//defining the function get data
+void matrix ::  getmatrix(int row,int column)
+{
+    cout<<"Enter "<<m<<"x"<<n<<" "<<"matrix"<<endl;
+    //taking input from user
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            cin>>arr[i][j];
+        }
+    }
+    cout<<endl;
+}
+//defining the function to disply output
+void matrix :: printmatrix()
+{
+    cout<<"you have entred tge following mmatrix "<<endl;
+    //display the reult for output
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            cout<<arr[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
+int main()
+{
+    //creating object of named class matrix
+    matrix obj1;
+    obj1.getmatrix(m,n);
+    obj1.printmatrix();
+    return 0;
+}
